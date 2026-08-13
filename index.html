@@ -24,7 +24,6 @@ body{
   "Segoe UI",
   "Noto Sans TC",
   sans-serif;
-
   background:#fff;
   color:#222;
 }
@@ -38,21 +37,14 @@ img{
   max-width:100%;
 }
 
-
-/* =========================
-   導覽列
-========================= */
-
 nav{
   position:fixed;
   top:0;
   left:0;
   width:100%;
   z-index:999;
-
   background:rgba(255,255,255,.85);
   backdrop-filter:blur(15px);
-
   border-bottom:1px solid rgba(0,0,0,.06);
 }
 
@@ -60,9 +52,7 @@ nav{
   width:100%;
   max-width:1150px;
   margin:auto;
-
   padding:15px 22px;
-
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -93,20 +83,12 @@ nav{
   color:#ff9e13;
 }
 
-
-/* =========================
-   首頁
-========================= */
-
 .hero{
   min-height:100vh;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   text-align:center;
-
   padding:120px 20px 80px;
 
   background:
@@ -122,18 +104,13 @@ nav{
 
 .hero-label{
   display:inline-block;
-
   padding:8px 17px;
   border-radius:100px;
-
   background:#fff4da;
   color:#df8700;
-
   font-size:13px;
   font-weight:800;
-
   margin-bottom:22px;
-
   animation:fadeUp .7s both;
 }
 
@@ -157,41 +134,30 @@ nav{
 
 .hero p{
   margin:24px auto 0;
-
   max-width:650px;
-
   color:#777;
   line-height:1.9;
   font-size:16px;
-
   animation:fadeUp .8s .2s both;
 }
 
 .hero-buttons{
   margin-top:35px;
-
   display:flex;
   justify-content:center;
   gap:12px;
   flex-wrap:wrap;
-
   animation:fadeUp .8s .3s both;
 }
 
 .hero-button{
   padding:14px 25px;
-
   border-radius:15px;
-
   color:#333;
   background:#fff;
-
   border:1px solid #eee;
-
   font-weight:800;
-
   box-shadow:0 10px 30px rgba(0,0,0,.06);
-
   transition:.3s;
 }
 
@@ -229,11 +195,6 @@ nav{
   }
 }
 
-
-/* =========================
-   共用
-========================= */
-
 .container{
   width:100%;
   max-width:1150px;
@@ -267,14 +228,10 @@ nav{
 
 .service-button{
   display:inline-block;
-
   margin-top:28px;
   padding:14px 25px;
-
   border-radius:15px;
-
   font-weight:800;
-
   transition:.3s;
 }
 
@@ -282,17 +239,12 @@ nav{
   transform:translateY(-4px);
 }
 
-
-/* =========================
-   539
-========================= */
+/* 539 */
 
 .section539{
   min-height:100vh;
-
   display:flex;
   align-items:center;
-
   padding:100px 20px;
 
   background:
@@ -302,51 +254,23 @@ nav{
 
 .visual539{
   position:relative;
-
   min-height:530px;
-
   border-radius:36px;
-
   overflow:hidden;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   padding:26px;
-
   background:linear-gradient(145deg,#ffc852,#ff9500);
-
   box-shadow:0 30px 80px rgba(255,145,0,.22);
-}
-
-.visual539::before{
-  content:"";
-
-  position:absolute;
-  top:-60px;
-  left:-60px;
-
-  width:220px;
-  height:220px;
-
-  border-radius:50%;
-
-  background:rgba(255,255,255,.18);
-
-  filter:blur(10px);
 }
 
 .cover539{
   width:58%;
   max-width:320px;
-
   border-radius:28px;
-
   box-shadow:0 22px 60px rgba(0,0,0,.22);
-
   z-index:2;
-
   animation:floatMain 4s ease-in-out infinite;
 }
 
@@ -354,31 +278,26 @@ nav{
   position:absolute;
   right:18px;
   bottom:18px;
-
   width:38%;
   max-width:210px;
-
   border-radius:26px;
-
   border:8px solid rgba(255,255,255,.80);
-
   box-shadow:0 20px 50px rgba(0,0,0,.18);
-
   z-index:3;
-
   animation:floatCard 4.5s ease-in-out infinite;
 }
 
-.orange-spark{
+.orange-spark,
+.pink-spark,
+.gold-spark{
   position:absolute;
-
-  color:rgba(255,255,255,.8);
-
   font-size:30px;
-
   z-index:1;
+  animation:twinkle 2.3s ease-in-out infinite;
+}
 
-  animation:twinkle 2.2s ease-in-out infinite;
+.orange-spark{
+  color:rgba(255,255,255,.8);
 }
 
 .orange-spark.one{
@@ -389,27 +308,19 @@ nav{
 .orange-spark.two{
   bottom:130px;
   left:38px;
-
   font-size:22px;
-
-  animation-delay:.8s;
 }
 
 .tag539{
   color:#ef9000;
   font-weight:800;
-  letter-spacing:1px;
 }
 
 .feature539{
   padding:14px 17px;
-
   border-radius:15px;
-
   background:rgba(255,255,255,.75);
-
   border:1px solid rgba(255,160,0,.15);
-
   color:#5d4b2c;
 }
 
@@ -420,23 +331,16 @@ nav{
 
 .button539{
   color:#fff;
-
   background:linear-gradient(135deg,#ffb833,#ff8d00);
-
   box-shadow:0 12px 30px rgba(255,145,0,.25);
 }
 
-
-/* =========================
-   ATG
-========================= */
+/* ATG */
 
 .sectionATG{
   min-height:100vh;
-
   display:flex;
   align-items:center;
-
   padding:100px 20px;
 
   background:
@@ -447,53 +351,24 @@ nav{
 
 .visualATG{
   position:relative;
-
   min-height:530px;
-
   border-radius:36px;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   overflow:hidden;
-
   padding:26px;
-
   background:linear-gradient(145deg,#fff7fb,#ffd8e8);
-
   border:1px solid #ffd8e6;
-
   box-shadow:0 30px 80px rgba(221,116,155,.15);
-}
-
-.visualATG::before{
-  content:"";
-
-  position:absolute;
-  top:-70px;
-  right:-50px;
-
-  width:220px;
-  height:220px;
-
-  border-radius:50%;
-
-  background:rgba(255,255,255,.8);
-
-  filter:blur(15px);
 }
 
 .coverATG{
   width:56%;
   max-width:300px;
-
   border-radius:30px;
-
   box-shadow:0 22px 60px rgba(209,93,147,.20);
-
   z-index:2;
-
   animation:floatPinkMain 4s ease-in-out infinite;
 }
 
@@ -501,31 +376,17 @@ nav{
   position:absolute;
   left:20px;
   bottom:18px;
-
   width:42%;
   max-width:220px;
-
   border-radius:28px;
-
   border:8px solid rgba(255,255,255,.9);
-
   box-shadow:0 20px 50px rgba(209,93,147,.18);
-
   z-index:3;
-
   animation:floatPinkCard 4.8s ease-in-out infinite;
 }
 
 .pink-spark{
-  position:absolute;
-
   color:#ff75af;
-
-  font-size:28px;
-
-  z-index:1;
-
-  animation:twinkle 2.5s ease-in-out infinite;
 }
 
 .pink-spark.one{
@@ -536,27 +397,19 @@ nav{
 .pink-spark.two{
   right:48px;
   bottom:120px;
-
   font-size:22px;
-
-  animation-delay:.9s;
 }
 
 .tagATG{
   color:#da7299;
   font-weight:800;
-  letter-spacing:1px;
 }
 
 .featureATG{
   padding:14px 17px;
-
   border-radius:15px;
-
   color:#755965;
-
   background:rgba(255,255,255,.82);
-
   border:1px solid #f7d8e4;
 }
 
@@ -567,23 +420,16 @@ nav{
 
 .buttonATG{
   color:#fff;
-
   background:linear-gradient(135deg,#ff6ba9,#ff3f90);
-
   box-shadow:0 12px 30px rgba(220,115,155,.22);
 }
 
-
-/* =========================
-   皇鼎 金黃白
-========================= */
+/* 皇鼎 */
 
 .sectionHD{
   min-height:100vh;
-
   display:flex;
   align-items:center;
-
   padding:100px 20px;
 
   background:
@@ -594,134 +440,56 @@ nav{
 
 .visualHD{
   position:relative;
-
   min-height:550px;
-
   border-radius:36px;
-
   overflow:hidden;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   padding:26px;
-
-  background:
-  linear-gradient(
-    145deg,
-    #fffdf3,
-    #ffe993
-  );
-
+  background:linear-gradient(145deg,#fffdf3,#ffe993);
   border:1px solid #efd272;
-
-  box-shadow:
-  0 30px 80px rgba(177,127,0,.20);
-}
-
-.visualHD::before{
-  content:"";
-
-  position:absolute;
-  top:-80px;
-  right:-50px;
-
-  width:240px;
-  height:240px;
-
-  border-radius:50%;
-
-  background:rgba(255,255,255,.85);
-
-  filter:blur(20px);
-}
-
-.visualHD::after{
-  content:"";
-
-  position:absolute;
-  bottom:-80px;
-  left:-60px;
-
-  width:230px;
-  height:230px;
-
-  border-radius:50%;
-
-  background:rgba(215,163,29,.20);
-
-  filter:blur(25px);
+  box-shadow:0 30px 80px rgba(177,127,0,.20);
 }
 
 .hdHome{
   width:55%;
   max-width:300px;
-
   border-radius:28px;
-
-  box-shadow:
-  0 22px 60px rgba(103,74,0,.20);
-
+  box-shadow:0 22px 60px rgba(103,74,0,.20);
   z-index:2;
-
   animation:floatGoldMain 4.2s ease-in-out infinite;
 }
 
 .hdPromo{
   position:absolute;
-
   right:18px;
   bottom:18px;
-
   width:42%;
   max-width:230px;
-
   border-radius:25px;
-
   border:7px solid rgba(255,255,255,.92);
-
-  box-shadow:
-  0 20px 50px rgba(122,84,0,.18);
-
+  box-shadow:0 20px 50px rgba(122,84,0,.18);
   z-index:3;
-
   animation:floatGoldCard 4.8s ease-in-out infinite;
 }
 
 .hdLogo{
   position:absolute;
-
   top:24px;
   left:24px;
-
   width:90px;
   height:90px;
-
   object-fit:cover;
-
   border-radius:24px;
-
   border:5px solid rgba(255,255,255,.9);
-
-  box-shadow:
-  0 15px 35px rgba(106,75,0,.22);
-
+  box-shadow:0 15px 35px rgba(106,75,0,.22);
   z-index:4;
-
   animation:logoGlow 3s ease-in-out infinite;
 }
 
 .gold-spark{
-  position:absolute;
-
   color:#d5a117;
-
-  font-size:30px;
-
-  z-index:1;
-
-  animation:twinkle 2.3s ease-in-out infinite;
 }
 
 .gold-spark.one{
@@ -732,27 +500,19 @@ nav{
 .gold-spark.two{
   left:45px;
   bottom:90px;
-
   font-size:22px;
-
-  animation-delay:.8s;
 }
 
 .tagHD{
   color:#b8870b;
   font-weight:800;
-  letter-spacing:1px;
 }
 
 .featureHD{
   padding:14px 17px;
-
   border-radius:15px;
-
   color:#66552b;
-
   background:rgba(255,255,255,.80);
-
   border:1px solid #efd77f;
 }
 
@@ -763,92 +523,45 @@ nav{
 
 .buttonHD{
   color:#5b4207;
-
-  background:linear-gradient(
-    135deg,
-    #fff095,
-    #e1ae2d
-  );
-
-  box-shadow:
-  0 12px 30px rgba(179,135,22,.22);
+  background:linear-gradient(135deg,#fff095,#e1ae2d);
+  box-shadow:0 12px 30px rgba(179,135,22,.22);
 }
 
-
-/* =========================
-   動畫
-========================= */
+/* 動畫 */
 
 @keyframes floatMain{
-  0%,100%{
-    transform:translateY(0) rotate(-2deg);
-  }
-
-  50%{
-    transform:translateY(-12px) rotate(1deg);
-  }
+  0%,100%{transform:translateY(0) rotate(-2deg);}
+  50%{transform:translateY(-12px) rotate(1deg);}
 }
 
 @keyframes floatCard{
-  0%,100%{
-    transform:translateY(0) rotate(2deg);
-  }
-
-  50%{
-    transform:translateY(-10px) rotate(-1deg);
-  }
+  0%,100%{transform:translateY(0) rotate(2deg);}
+  50%{transform:translateY(-10px) rotate(-1deg);}
 }
 
 @keyframes floatPinkMain{
-  0%,100%{
-    transform:translateY(0) rotate(2deg);
-  }
-
-  50%{
-    transform:translateY(-12px) rotate(-1deg);
-  }
+  0%,100%{transform:translateY(0) rotate(2deg);}
+  50%{transform:translateY(-12px) rotate(-1deg);}
 }
 
 @keyframes floatPinkCard{
-  0%,100%{
-    transform:translateY(0) rotate(-2deg);
-  }
-
-  50%{
-    transform:translateY(-10px) rotate(1deg);
-  }
+  0%,100%{transform:translateY(0) rotate(-2deg);}
+  50%{transform:translateY(-10px) rotate(1deg);}
 }
 
 @keyframes floatGoldMain{
-  0%,100%{
-    transform:translateY(0) rotate(-1.5deg);
-  }
-
-  50%{
-    transform:translateY(-12px) rotate(1deg);
-  }
+  0%,100%{transform:translateY(0) rotate(-1.5deg);}
+  50%{transform:translateY(-12px) rotate(1deg);}
 }
 
 @keyframes floatGoldCard{
-  0%,100%{
-    transform:translateY(0) rotate(2deg);
-  }
-
-  50%{
-    transform:translateY(-11px) rotate(-1deg);
-  }
+  0%,100%{transform:translateY(0) rotate(2deg);}
+  50%{transform:translateY(-11px) rotate(-1deg);}
 }
 
 @keyframes logoGlow{
-  0%,100%{
-    transform:translateY(0);
-    box-shadow:0 15px 35px rgba(106,75,0,.20);
-  }
-
-  50%{
-    transform:translateY(-6px);
-    box-shadow:0 18px 45px rgba(226,176,33,.38);
-  }
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-6px);}
 }
 
 @keyframes twinkle{
@@ -856,36 +569,21 @@ nav{
     opacity:.35;
     transform:scale(.9);
   }
-
   50%{
     opacity:1;
     transform:scale(1.15);
   }
 }
 
-
-/* =========================
-   Footer
-========================= */
-
 footer{
   text-align:center;
-
   padding:45px 20px;
-
   color:#999;
   background:#fff;
-
   font-size:13px;
   line-height:1.9;
-
   border-top:1px solid #eee;
 }
-
-
-/* =========================
-   手機
-========================= */
 
 @media(max-width:920px){
 
@@ -926,9 +624,7 @@ footer{
   .hdPromo{
     width:38%;
     max-width:135px;
-
     bottom:14px;
-
     border-width:5px;
   }
 
@@ -944,10 +640,8 @@ footer{
   .hdLogo{
     width:65px;
     height:65px;
-
     top:16px;
     left:16px;
-
     border-radius:18px;
     border-width:4px;
   }
@@ -955,14 +649,9 @@ footer{
 </style>
 </head>
 
-
 <body>
 
-
-<!-- 導覽列 -->
-
 <nav>
-
 <div class="nav-inner">
 
   <div class="logo">
@@ -970,27 +659,13 @@ footer{
   </div>
 
   <div class="menu">
-
-    <a href="#539">
-      539 趨勢
-    </a>
-
-    <a href="#atg">
-      ATG 助手
-    </a>
-
-    <a href="#huangding">
-      皇鼎娛樂城
-    </a>
-
+    <a href="#539">539 趨勢</a>
+    <a href="#atg">ATG 助手</a>
+    <a href="#huangding">皇鼎娛樂城</a>
   </div>
 
 </div>
-
 </nav>
-
-
-<!-- 首頁 -->
 
 <section class="hero">
 
@@ -1011,28 +686,16 @@ footer{
 
   <div class="hero-buttons">
 
-    <a
-      href="#539"
-      class="hero-button hero539">
-
+    <a href="#539" class="hero-button hero539">
       🎱 539 趨勢分析
-
     </a>
 
-    <a
-      href="#atg"
-      class="hero-button heroATG">
-
+    <a href="#atg" class="hero-button heroATG">
       🌸 ATG 分析助手
-
     </a>
 
-    <a
-      href="#huangding"
-      class="hero-button heroHD">
-
+    <a href="#huangding" class="hero-button heroHD">
       👑 皇鼎娛樂城
-
     </a>
 
   </div>
@@ -1041,29 +704,18 @@ footer{
 
 </section>
 
+<!-- 539 -->
 
-<!-- ====================
-     539
-==================== -->
-
-<section
-  id="539"
-  class="section539">
+<section id="539" class="section539">
 
 <div class="container">
 
 <div class="service-box">
 
-
   <div class="visual539">
 
-    <div class="orange-spark one">
-      ✦
-    </div>
-
-    <div class="orange-spark two">
-      ✦
-    </div>
+    <div class="orange-spark one">✦</div>
+    <div class="orange-spark two">✦</div>
 
     <img
       src="539-app.jpg"
@@ -1077,7 +729,6 @@ footer{
 
   </div>
 
-
   <div>
 
     <small class="tag539">
@@ -1089,45 +740,38 @@ footer{
     </h2>
 
     <p class="service-text">
-
       依照個人抓牌板路與歷史趨勢進行系統化整理，
       將每日分析結果清楚呈現。
-
       玩法包含連碰 234 星、全車、尾數與多選不中，
       手機即可快速查看。
-
     </p>
 
     <div class="features">
 
       <div class="feature539">
-        <span>✓</span>
-        每日最新趨勢分析
+        <span>✓</span> 每日最新趨勢分析
       </div>
 
       <div class="feature539">
-        <span>✓</span>
-        連碰 234 星分析
+        <span>✓</span> 連碰 234 星分析
       </div>
 
       <div class="feature539">
-        <span>✓</span>
-        全車／尾數／多選不中
+        <span>✓</span> 全車／尾數／多選不中
       </div>
 
       <div class="feature539">
-        <span>✓</span>
-        橘黃色系介面，清楚好閱讀
+        <span>✓</span> 橘黃色系介面，清楚好閱讀
       </div>
 
     </div>
 
     <a
-      href="#"
+      href="https://lin.ee/rSoIKMM"
+      target="_blank"
+      rel="noopener noreferrer"
       class="service-button button539">
-
       立即了解 →
-
     </a>
 
   </div>
@@ -1139,18 +783,13 @@ footer{
 </section>
 
 
-<!-- ====================
-     ATG
-==================== -->
+<!-- ATG -->
 
-<section
-  id="atg"
-  class="sectionATG">
+<section id="atg" class="sectionATG">
 
 <div class="container">
 
 <div class="service-box">
-
 
   <div>
 
@@ -1163,59 +802,46 @@ footer{
     </h2>
 
     <p class="service-text">
-
       房號分析、續玩判讀與個人近期紀錄，
       一個頁面全部搞定。
-
       淡粉白色介面清楚柔和，
       手機即可快速整理與查看分析結果。
-
     </p>
 
     <div class="features">
 
       <div class="featureATG">
-        <span>✓</span>
-        房號分析功能
+        <span>✓</span> 房號分析功能
       </div>
 
       <div class="featureATG">
-        <span>✓</span>
-        續玩分析判讀
+        <span>✓</span> 續玩分析判讀
       </div>
 
       <div class="featureATG">
-        <span>✓</span>
-        分析紀錄整合
+        <span>✓</span> 分析紀錄整合
       </div>
 
       <div class="featureATG">
-        <span>✓</span>
-        淡粉白風格，清楚好操作
+        <span>✓</span> 淡粉白風格，清楚好操作
       </div>
 
     </div>
 
     <a
-      href="#"
+      href="https://lin.ee/rSoIKMM"
+      target="_blank"
+      rel="noopener noreferrer"
       class="service-button buttonATG">
-
       立即了解 →
-
     </a>
 
   </div>
 
-
   <div class="visualATG">
 
-    <div class="pink-spark one">
-      ✦
-    </div>
-
-    <div class="pink-spark two">
-      ✦
-    </div>
+    <div class="pink-spark one">✦</div>
+    <div class="pink-spark two">✦</div>
 
     <img
       src="atg-app.jpg"
@@ -1229,7 +855,6 @@ footer{
 
   </div>
 
-
 </div>
 
 </div>
@@ -1237,28 +862,18 @@ footer{
 </section>
 
 
-<!-- ====================
-     皇鼎
-==================== -->
+<!-- 皇鼎 -->
 
-<section
-  id="huangding"
-  class="sectionHD">
+<section id="huangding" class="sectionHD">
 
 <div class="container">
 
 <div class="service-box">
 
-
   <div class="visualHD">
 
-    <div class="gold-spark one">
-      ✦
-    </div>
-
-    <div class="gold-spark two">
-      ✦
-    </div>
+    <div class="gold-spark one">✦</div>
+    <div class="gold-spark two">✦</div>
 
     <img
       src="hd-logo.png"
@@ -1277,7 +892,6 @@ footer{
 
   </div>
 
-
   <div>
 
     <small class="tagHD">
@@ -1289,49 +903,41 @@ footer{
     </h2>
 
     <p class="service-text">
-
       皇鼎娛樂城整合多項娛樂內容與會員服務，
       可快速查看平台館別、最新優惠活動及會員相關資訊。
-
       介面採用金、黃、白主色，
       簡潔明亮又保有品牌質感。
-
     </p>
 
     <div class="features">
 
       <div class="featureHD">
-        <span>✓</span>
-        多館別娛樂內容
+        <span>✓</span> 多館別娛樂內容
       </div>
 
       <div class="featureHD">
-        <span>✓</span>
-        最新優惠活動
+        <span>✓</span> 最新優惠活動
       </div>
 
       <div class="featureHD">
-        <span>✓</span>
-        VIP 會員服務
+        <span>✓</span> VIP 會員服務
       </div>
 
       <div class="featureHD">
-        <span>✓</span>
-        線上客服與會員功能
+        <span>✓</span> 線上客服與會員功能
       </div>
 
     </div>
 
     <a
-      href="#"
+      href="https://hd5577.com/"
+      target="_blank"
+      rel="noopener noreferrer"
       class="service-button buttonHD">
-
       立即了解 →
-
     </a>
 
   </div>
-
 
 </div>
 
@@ -1339,17 +945,11 @@ footer{
 
 </section>
 
-
 <footer>
-
   © 2026 芯瑤服務中心
-
   <br><br>
-
   本頁資訊僅供資訊與娛樂用途。
-
 </footer>
-
 
 </body>
 </html>
