@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>芯瑤 AI 分析中心</title>
+<title>芯瑤｜服務中心</title>
 
 <style>
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
 }
 
 html{
@@ -25,162 +25,139 @@ body{
   "Noto Sans TC",
   sans-serif;
 
-  background:
-  radial-gradient(circle at top right,#553000 0%,transparent 30%),
-  radial-gradient(circle at bottom left,#402400 0%,transparent 30%),
-  #0d0d0d;
-
-  color:#fff;
-  min-height:100vh;
+  background:#fff;
+  color:#222;
 }
 
-/* 背景光 */
-.bg-light{
-  position:fixed;
-  width:350px;
-  height:350px;
-  border-radius:50%;
-  background:#ffae00;
-  filter:blur(150px);
-  opacity:.10;
-  z-index:-1;
-  animation:floatLight 7s ease-in-out infinite alternate;
+a{
+  text-decoration:none;
 }
 
-.light1{
-  top:-100px;
-  right:-100px;
-}
+/* ===== 導覽列 ===== */
 
-.light2{
-  bottom:-150px;
-  left:-100px;
-}
-
-@keyframes floatLight{
-  from{
-    transform:translateY(-20px);
-  }
-  to{
-    transform:translateY(40px);
-  }
-}
-
-/* 導覽列 */
 nav{
-  width:100%;
   position:fixed;
   top:0;
   left:0;
-  z-index:100;
+  width:100%;
+  z-index:999;
 
-  background:rgba(12,12,12,.80);
+  background:rgba(255,255,255,.82);
   backdrop-filter:blur(15px);
 
-  border-bottom:1px solid rgba(255,185,60,.12);
+  border-bottom:1px solid rgba(0,0,0,.06);
 }
 
 .nav-inner{
-  max-width:1100px;
+  max-width:1150px;
   margin:auto;
+
+  padding:15px 22px;
 
   display:flex;
   justify-content:space-between;
   align-items:center;
-
-  padding:16px 20px;
 }
 
 .logo{
-  font-weight:800;
-  font-size:20px;
+  font-size:19px;
+  font-weight:900;
 }
 
 .logo span{
-  color:#ffb52e;
+  color:#ff9e13;
 }
 
 .menu{
   display:flex;
-  gap:20px;
+  gap:22px;
 }
 
 .menu a{
-  color:#bbb;
-  text-decoration:none;
+  color:#666;
   font-size:14px;
-  transition:.3s;
+  font-weight:600;
 }
 
 .menu a:hover{
-  color:#ffb52e;
+  color:#ff9e13;
 }
 
-/* 首屏 */
+
+/* ===== 首頁 ===== */
+
 .hero{
   min-height:100vh;
 
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
 
   text-align:center;
 
-  padding:120px 20px 70px;
+  padding:120px 20px 80px;
+
+  background:
+  radial-gradient(circle at 20% 20%,#fff0cd,transparent 30%),
+  radial-gradient(circle at 80% 30%,#ffe5ef,transparent 28%),
+  radial-gradient(circle at 60% 90%,#fff1ba,transparent 30%),
+  #fff;
 }
 
-.hero-content{
+.hero-box{
   max-width:850px;
 }
 
-.badge{
+.hero-label{
   display:inline-block;
 
-  padding:7px 14px;
-
-  border:1px solid rgba(255,180,40,.4);
+  padding:8px 17px;
   border-radius:100px;
 
-  color:#ffc04d;
-  background:rgba(255,174,0,.08);
-
-  margin-bottom:25px;
+  background:#fff4da;
+  color:#df8700;
 
   font-size:13px;
+  font-weight:800;
 
-  animation:fadeUp .8s ease both;
+  margin-bottom:22px;
+
+  animation:fadeUp .7s both;
 }
 
 .hero h1{
-  font-size:clamp(42px,8vw,76px);
+  font-size:clamp(42px,8vw,74px);
   line-height:1.1;
+
+  font-weight:950;
 
   background:linear-gradient(
     90deg,
-    #fff,
-    #ffd273,
-    #ff9d00
+    #ff9500,
+    #ffbe39,
+    #dc9e29
   );
 
   -webkit-background-clip:text;
   color:transparent;
 
-  animation:fadeUp .9s .1s ease both;
+  animation:fadeUp .8s .1s both;
 }
 
 .hero p{
+  margin:24px auto 0;
+
   max-width:650px;
-  margin:25px auto 0;
 
-  color:#aaa;
+  color:#777;
 
-  font-size:17px;
-  line-height:1.8;
+  line-height:1.9;
+  font-size:16px;
 
-  animation:fadeUp .9s .2s ease both;
+  animation:fadeUp .8s .2s both;
 }
 
-.hero-btns{
+.hero-buttons{
   margin-top:35px;
 
   display:flex;
@@ -188,60 +165,46 @@ nav{
   gap:12px;
   flex-wrap:wrap;
 
-  animation:fadeUp .9s .3s ease both;
+  animation:fadeUp .8s .3s both;
 }
 
-.btn{
-  display:inline-block;
-
+.hero-button{
   padding:14px 25px;
 
-  border-radius:14px;
+  border-radius:15px;
 
-  text-decoration:none;
+  color:#333;
+  background:white;
+
+  border:1px solid #eee;
+
+  font-weight:800;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
 
   transition:.3s;
-
-  font-weight:700;
 }
 
-.btn-main{
-  color:#111;
+.hero-button:hover{
+  transform:translateY(-4px);
+}
 
-  background:
-  linear-gradient(
+.btn539{
+  color:white;
+
+  background:linear-gradient(
     135deg,
-    #ffd56a,
-    #ffa514
+    #ffb52e,
+    #ff8a00
   );
 
-  box-shadow:
-  0 10px 35px rgba(255,162,0,.18);
-}
-
-.btn-main:hover{
-  transform:translateY(-3px);
-  box-shadow:
-  0 15px 45px rgba(255,162,0,.3);
-}
-
-.btn-second{
-  color:#eee;
-
-  border:1px solid #333;
-
-  background:#171717;
-}
-
-.btn-second:hover{
-  border-color:#ffb52e;
-  color:#ffb52e;
+  border:none;
 }
 
 @keyframes fadeUp{
   from{
     opacity:0;
-    transform:translateY(30px);
+    transform:translateY(25px);
   }
 
   to{
@@ -250,9 +213,27 @@ nav{
   }
 }
 
-/* 共用區 */
-section{
-  padding:90px 20px;
+
+/* ===========================
+   539 橘黃色區
+=========================== */
+
+.section539{
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+
+  padding:100px 20px;
+
+  background:
+  radial-gradient(circle at 80% 20%,rgba(255,185,55,.30),transparent 30%),
+  linear-gradient(
+    145deg,
+    #fffaf0,
+    #fff0c6
+  );
 }
 
 .container{
@@ -261,278 +242,488 @@ section{
   margin:auto;
 }
 
-.section-title{
-  text-align:center;
-  margin-bottom:45px;
-}
-
-.section-title small{
-  color:#ffad20;
-  letter-spacing:3px;
-}
-
-.section-title h2{
-  margin-top:8px;
-  font-size:34px;
-}
-
-.section-title p{
-  margin-top:12px;
-  color:#888;
-}
-
-/* 三張卡 */
-.cards{
-  display:grid;
-
-  grid-template-columns:
-  repeat(3,1fr);
-
-  gap:20px;
-}
-
-.card{
-  padding:30px;
-
-  background:
-  linear-gradient(
-    145deg,
-    rgba(255,255,255,.065),
-    rgba(255,255,255,.025)
-  );
-
-  border:
-  1px solid rgba(255,255,255,.08);
-
-  border-radius:25px;
-
-  transition:.35s;
-
-  position:relative;
-  overflow:hidden;
-}
-
-.card:before{
-  content:"";
-
-  width:130px;
-  height:130px;
-
-  border-radius:50%;
-
-  background:#ffae00;
-
-  filter:blur(70px);
-
-  opacity:.08;
-
-  position:absolute;
-
-  top:-60px;
-  right:-60px;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-
-  border-color:
-  rgba(255,177,37,.35);
-
-  box-shadow:
-  0 20px 60px rgba(0,0,0,.35);
-}
-
-.icon{
-  width:55px;
-  height:55px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-size:27px;
-
-  border-radius:17px;
-
-  background:
-  linear-gradient(
-    135deg,
-    #ffcc58,
-    #ff9500
-  );
-
-  margin-bottom:22px;
-}
-
-.card h3{
-  font-size:22px;
-}
-
-.card p{
-  color:#999;
-  line-height:1.8;
-
-  margin-top:12px;
-
-  min-height:90px;
-}
-
-.card a{
-  display:inline-block;
-
-  margin-top:18px;
-
-  color:#ffbb3d;
-
-  text-decoration:none;
-
-  font-weight:700;
-}
-
-.card a:hover{
-  color:#fff;
-}
-
-/* 詳細介紹 */
-.detail{
-  margin-top:30px;
-
+.service-box{
   display:grid;
 
   grid-template-columns:
   1fr 1fr;
 
+  gap:50px;
+
+  align-items:center;
+}
+
+.number539{
+
+  display:flex;
+  justify-content:center;
   align-items:center;
 
-  gap:45px;
+  min-height:430px;
 
-  padding:45px;
+  border-radius:35px;
 
-  border-radius:30px;
+  background:
+  linear-gradient(
+    145deg,
+    #ffc64c,
+    #ff8e00
+  );
 
-  background:#131313;
+  box-shadow:
+  0 30px 80px rgba(255,145,0,.25);
 
-  border:1px solid #232323;
+  position:relative;
+  overflow:hidden;
 }
 
-.detail-number{
-  font-size:80px;
-  font-weight:900;
+.ball{
+  width:180px;
+  height:180px;
 
-  color:rgba(255,174,0,.12);
+  border-radius:50%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:white;
+
+  color:#ff9700;
+
+  font-size:60px;
+  font-weight:950;
+
+  box-shadow:
+  0 18px 40px rgba(0,0,0,.15);
+
+  animation:floatBall 3s ease-in-out infinite;
 }
 
-.detail h3{
-  font-size:30px;
-  margin-bottom:15px;
+@keyframes floatBall{
+
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-15px);
+  }
 }
 
-.detail p{
-  color:#999;
+.tag539{
+  color:#ef9000;
+}
+
+.service-title{
+  font-size:40px;
+  margin-top:10px;
+}
+
+.service-text{
+  color:#777;
+
   line-height:1.9;
+
+  margin-top:18px;
 }
 
 .features{
-  margin-top:22px;
+  margin-top:25px;
 
   display:grid;
-
-  gap:11px;
+  gap:12px;
 }
 
-.feature{
-  color:#ddd;
+.feature539{
+  padding:14px 17px;
+
+  background:rgba(255,255,255,.75);
+
+  border-radius:15px;
+
+  color:#5d4b2c;
+
+  border:
+  1px solid rgba(255,160,0,.15);
 }
 
-.feature span{
-  color:#ffb52e;
-  margin-right:7px;
+.feature539 span{
+  color:#ff9700;
+  font-weight:900;
 }
 
-/* CTA */
-.cta{
-  margin-top:40px;
 
-  padding:60px 25px;
+/* ===========================
+   ATG 粉白區
+=========================== */
+
+.sectionATG{
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+
+  padding:100px 20px;
+
+  background:
+  radial-gradient(circle at 20% 20%,#ffdce9,transparent 30%),
+  radial-gradient(circle at 80% 80%,#fff0f6,transparent 30%),
+  #fff9fb;
+}
+
+.atg-preview{
+
+  min-height:430px;
+
+  border-radius:35px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  position:relative;
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    145deg,
+    #fff,
+    #ffe5ef
+  );
+
+  border:1px solid #ffe0eb;
+
+  box-shadow:
+  0 30px 80px rgba(221,116,155,.13);
+}
+
+.phone{
+
+  width:220px;
+  height:380px;
+
+  border-radius:35px;
+
+  background:white;
+
+  border:7px solid #292929;
+
+  padding:18px;
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.15);
+
+  animation:phoneFloat 4s ease-in-out infinite;
+}
+
+@keyframes phoneFloat{
+
+  0%,100%{
+    transform:rotate(-3deg) translateY(0);
+  }
+
+  50%{
+    transform:rotate(1deg) translateY(-12px);
+  }
+}
+
+.phone-top{
+  width:70px;
+  height:7px;
+
+  margin:auto;
+
+  border-radius:20px;
+
+  background:#222;
+}
+
+.phone-content{
+  height:310px;
+
+  margin-top:20px;
+
+  border-radius:22px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
 
   text-align:center;
 
-  border-radius:30px;
+  background:
+  linear-gradient(
+    150deg,
+    #fff,
+    #ffe5ef
+  );
+
+  color:#d46891;
+}
+
+.phone-icon{
+  font-size:55px;
+}
+
+.phone-content strong{
+  font-size:18px;
+  margin-top:10px;
+}
+
+.tagATG{
+  color:#da7299;
+}
+
+.featureATG{
+
+  padding:14px 17px;
+
+  border-radius:15px;
+
+  color:#755965;
+
+  background:rgba(255,255,255,.8);
+
+  border:1px solid #f7d8e4;
+}
+
+.featureATG span{
+  color:#dd779d;
+  font-weight:900;
+}
+
+
+/* ===========================
+   皇鼎金黃白
+=========================== */
+
+.sectionHD{
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+
+  padding:100px 20px;
+
+  background:
+  radial-gradient(circle at 80% 20%,rgba(255,209,76,.3),transparent 30%),
+  linear-gradient(
+    145deg,
+    #fffdf8,
+    #fff8dc
+  );
+}
+
+.hd-preview{
+
+  min-height:430px;
+
+  border-radius:35px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  position:relative;
+  overflow:hidden;
 
   background:
   linear-gradient(
     135deg,
-    rgba(255,181,46,.13),
-    rgba(255,127,0,.05)
+    #ffffff,
+    #fff4bf
   );
 
-  border:
-  1px solid rgba(255,183,52,.18);
+  border:1px solid #f3d67b;
+
+  box-shadow:
+  0 30px 80px rgba(164,117,0,.16);
 }
 
-.cta h2{
-  font-size:34px;
+.crown{
+
+  font-size:130px;
+
+  filter:
+  drop-shadow(
+    0 20px 20px rgba(182,133,0,.2)
+  );
+
+  animation:crownFloat 3.5s ease-in-out infinite;
 }
 
-.cta p{
-  color:#999;
-  margin:14px 0 25px;
+@keyframes crownFloat{
+
+  0%,100%{
+    transform:translateY(0) rotate(-3deg);
+  }
+
+  50%{
+    transform:translateY(-14px) rotate(3deg);
+  }
 }
 
-/* 頁尾 */
+.tagHD{
+  color:#bc8a16;
+}
+
+.featureHD{
+
+  padding:14px 17px;
+
+  border-radius:15px;
+
+  background:rgba(255,255,255,.8);
+
+  border:1px solid #f0d782;
+
+  color:#65552b;
+}
+
+.featureHD span{
+  color:#c89617;
+  font-weight:900;
+}
+
+
+/* ===== 按鈕 ===== */
+
+.service-button{
+
+  display:inline-block;
+
+  margin-top:28px;
+
+  padding:14px 25px;
+
+  border-radius:15px;
+
+  font-weight:800;
+
+  transition:.3s;
+}
+
+.service-button:hover{
+  transform:translateY(-4px);
+}
+
+.button539{
+  color:white;
+
+  background:
+  linear-gradient(
+    135deg,
+    #ffb833,
+    #ff8d00
+  );
+
+  box-shadow:
+  0 12px 30px rgba(255,145,0,.25);
+}
+
+.buttonATG{
+  color:#a84f72;
+
+  background:
+  linear-gradient(
+    135deg,
+    #fff,
+    #ffdce9
+  );
+
+  border:1px solid #f4cbd9;
+
+  box-shadow:
+  0 12px 30px rgba(220,115,155,.13);
+}
+
+.buttonHD{
+
+  color:#59410b;
+
+  background:
+  linear-gradient(
+    135deg,
+    #ffe67a,
+    #d7ab34
+  );
+
+  box-shadow:
+  0 12px 30px rgba(179,135,22,.2);
+}
+
+
+/* ===== 頁尾 ===== */
+
 footer{
-  padding:35px 20px;
 
   text-align:center;
 
-  color:#666;
+  padding:45px 20px;
+
+  background:#fff;
+
+  color:#999;
 
   font-size:13px;
 
-  border-top:1px solid #1b1b1b;
+  border-top:1px solid #eee;
 }
 
-/* 手機 */
+
+/* ===== 手機 ===== */
+
 @media(max-width:800px){
 
   .menu{
     display:none;
   }
 
-  .cards{
+  .service-box{
     grid-template-columns:1fr;
+    gap:35px;
   }
 
-  .detail{
-    grid-template-columns:1fr;
-    padding:30px 25px;
+  .number539,
+  .atg-preview,
+  .hd-preview{
+    min-height:330px;
   }
 
-  .detail-number{
-    font-size:55px;
+  .ball{
+    width:145px;
+    height:145px;
+    font-size:50px;
   }
 
-  section{
-    padding:65px 18px;
+  .phone{
+    transform:scale(.85);
   }
 
-  .hero{
-    padding-left:18px;
-    padding-right:18px;
+  .service-title{
+    font-size:32px;
+  }
+
+  .section539,
+  .sectionATG,
+  .sectionHD{
+    padding:80px 18px;
   }
 
 }
+
 </style>
 </head>
 
-
 <body>
-
-<div class="bg-light light1"></div>
-<div class="bg-light light2"></div>
 
 
 <nav>
+
   <div class="nav-inner">
 
     <div class="logo">
@@ -540,270 +731,247 @@ footer{
     </div>
 
     <div class="menu">
-      <a href="#services">服務項目</a>
-      <a href="#539">539分析</a>
-      <a href="#atg">ATG助手</a>
-      <a href="#huangding">皇鼎娛樂城</a>
+
+      <a href="#539">
+        539 趨勢
+      </a>
+
+      <a href="#atg">
+        ATG 助手
+      </a>
+
+      <a href="#huangding">
+        皇鼎娛樂城
+      </a>
+
     </div>
 
   </div>
+
 </nav>
 
 
 <!-- 首頁 -->
 
-<div class="hero">
+<section class="hero">
 
-  <div class="hero-content">
+  <div class="hero-box">
 
-    <div class="badge">
-      ✨ XINYAO AI ANALYSIS
+    <div class="hero-label">
+      ✦ XINYAO SERVICE CENTER
     </div>
 
     <h1>
-      芯瑤 AI 分析中心
+      芯瑤服務中心
     </h1>
 
     <p>
-      將趨勢分析、電子遊戲分析工具與娛樂平台整合於同一個入口，
-      快速找到你需要的服務。
+      539 趨勢分析、ATG 分析助手與皇鼎娛樂城
+      集中於同一個入口，選擇你想了解的服務。
     </p>
 
-    <div class="hero-btns">
-
-      <a
-        href="#services"
-        class="btn btn-main">
-        開始了解
-      </a>
+    <div class="hero-buttons">
 
       <a
         href="#539"
-        class="btn btn-second">
-        539 趨勢分析
+        class="hero-button btn539">
+
+        🎱 539 趨勢分析
+
+      </a>
+
+      <a
+        href="#atg"
+        class="hero-button">
+
+        🌸 ATG 分析助手
+
+      </a>
+
+      <a
+        href="#huangding"
+        class="hero-button">
+
+        👑 皇鼎娛樂城
+
       </a>
 
     </div>
 
   </div>
-
-</div>
-
-
-<!-- 三項服務 -->
-
-<section id="services">
-
-<div class="container">
-
-  <div class="section-title">
-
-    <small>OUR SERVICES</small>
-
-    <h2>
-      三大服務
-    </h2>
-
-    <p>
-      選擇你想了解的項目
-    </p>
-
-  </div>
-
-
-  <div class="cards">
-
-
-    <!-- 539 -->
-
-    <div class="card">
-
-      <div class="icon">
-        🎱
-      </div>
-
-      <h3>
-        芯瑤 539 趨勢分析
-      </h3>
-
-      <p>
-        透過歷史開獎資料與個人抓牌邏輯，
-        將每日趨勢整理成簡單好閱讀的分析結果。
-      </p>
-
-      <a href="#539">
-        查看介紹 →
-      </a>
-
-    </div>
-
-
-    <!-- ATG -->
-
-    <div class="card">
-
-      <div class="icon">
-        🎰
-      </div>
-
-      <h3>
-        芯瑤 ATG 分析助手
-      </h3>
-
-      <p>
-        將選房觀察、遊戲資料與個人操作邏輯，
-        整合成更方便查看的分析助手。
-      </p>
-
-      <a href="#atg">
-        查看介紹 →
-      </a>
-
-    </div>
-
-
-    <!-- 皇鼎 -->
-
-    <div class="card">
-
-      <div class="icon">
-        👑
-      </div>
-
-      <h3>
-        皇鼎娛樂城
-      </h3>
-
-      <p>
-        提供娛樂平台相關資訊，
-        可由此了解平台內容與相關服務。
-      </p>
-
-      <a href="#huangding">
-        查看介紹 →
-      </a>
-
-    </div>
-
-  </div>
-
-</div>
 
 </section>
+
 
 
 <!-- 539 -->
 
-<section id="539">
+<section
+  id="539"
+  class="section539">
 
 <div class="container">
 
-  <div class="detail">
+<div class="service-box">
 
-    <div>
 
-      <div class="detail-number">
-        01
-      </div>
+<div class="number539">
 
-    </div>
-
-    <div>
-
-      <h3>
-        🎱 芯瑤 539 趨勢分析
-      </h3>
-
-      <p>
-        將歷史資料與個人分析方式系統化，
-        每日快速整理號碼趨勢，
-        讓分析內容更清楚、更方便查看。
-      </p>
-
-      <div class="features">
-
-        <div class="feature">
-          <span>✓</span>
-          每日趨勢分析
-        </div>
-
-        <div class="feature">
-          <span>✓</span>
-          歷史資料整理
-        </div>
-
-        <div class="feature">
-          <span>✓</span>
-          多種分析模式
-        </div>
-
-        <div class="feature">
-          <span>✓</span>
-          手機即可查看
-        </div>
-
-      </div>
-
-    </div>
-
+  <div class="ball">
+    539
   </div>
 
 </div>
 
+
+<div>
+
+  <small class="tag539">
+    XINYAO 539
+  </small>
+
+  <h2 class="service-title">
+    🧡 芯瑤 539 趨勢分析
+  </h2>
+
+  <p class="service-text">
+
+    依照歷史開獎資料與個人抓牌板路，
+    將每日趨勢進行系統化整理，
+    讓分析內容更加清楚、直覺。
+
+  </p>
+
+
+  <div class="features">
+
+    <div class="feature539">
+      <span>✓</span>
+      每日最新趨勢分析
+    </div>
+
+    <div class="feature539">
+      <span>✓</span>
+      連碰 234 星分析
+    </div>
+
+    <div class="feature539">
+      <span>✓</span>
+      全車分析
+    </div>
+
+    <div class="feature539">
+      <span>✓</span>
+      尾數與多選不中分析
+    </div>
+
+  </div>
+
+
+  <a
+    href="#"
+    class="service-button button539">
+
+    立即了解 →
+
+  </a>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
+
 
 
 <!-- ATG -->
 
-<section id="atg">
+<section
+  id="atg"
+  class="sectionATG">
 
 <div class="container">
 
-  <div class="detail">
+<div class="service-box">
 
-    <div>
 
-      <div class="detail-number">
-        02
-      </div>
+<div>
 
+  <small class="tagATG">
+    XINYAO ATG
+  </small>
+
+  <h2 class="service-title">
+    🌸 芯瑤 ATG 分析助手
+  </h2>
+
+  <p class="service-text">
+
+    將遊戲資訊、選房觀察與個人操作邏輯
+    整理成更簡單易懂的分析流程，
+    手機即可快速查看。
+
+  </p>
+
+
+  <div class="features">
+
+    <div class="featureATG">
+      <span>✓</span>
+      選房分析
     </div>
 
-    <div>
+    <div class="featureATG">
+      <span>✓</span>
+      遊戲資料整理
+    </div>
 
-      <h3>
-        🎰 芯瑤 ATG 分析助手
-      </h3>
+    <div class="featureATG">
+      <span>✓</span>
+      個人分析 SOP
+    </div>
 
-      <p>
-        將選房與觀察流程系統化，
-        協助快速整理遊戲資訊，
-        建立更清楚的分析流程。
-      </p>
+    <div class="featureATG">
+      <span>✓</span>
+      手機快速使用
+    </div>
 
-      <div class="features">
+  </div>
 
-        <div class="feature">
-          <span>✓</span>
-          遊戲資料整理
-        </div>
 
-        <div class="feature">
-          <span>✓</span>
-          選房分析
-        </div>
+  <a
+    href="#"
+    class="service-button buttonATG">
 
-        <div class="feature">
-          <span>✓</span>
-          操作流程整理
-        </div>
+    立即了解 →
 
-        <div class="feature">
-          <span>✓</span>
-          手機版介面
-        </div>
+  </a>
 
+</div>
+
+
+<div class="atg-preview">
+
+  <div class="phone">
+
+    <div class="phone-top"></div>
+
+    <div class="phone-content">
+
+      <div class="phone-icon">
+        🎰
       </div>
+
+      <strong>
+        芯瑤 ATG
+      </strong>
+
+      <small>
+        AI 分析助手
+      </small>
 
     </div>
 
@@ -811,97 +979,105 @@ footer{
 
 </div>
 
+
+</div>
+
+</div>
+
 </section>
+
 
 
 <!-- 皇鼎 -->
 
-<section id="huangding">
+<section
+  id="huangding"
+  class="sectionHD">
 
 <div class="container">
 
-  <div class="detail">
+<div class="service-box">
 
-    <div>
 
-      <div class="detail-number">
-        03
-      </div>
+<div class="hd-preview">
 
+  <div class="crown">
+    👑
+  </div>
+
+</div>
+
+
+<div>
+
+  <small class="tagHD">
+    HUANG DING
+  </small>
+
+  <h2 class="service-title">
+    👑 皇鼎娛樂城
+  </h2>
+
+  <p class="service-text">
+
+    皇鼎娛樂城相關資訊入口，
+    可快速查看平台內容、會員服務
+    與最新活動資訊。
+
+  </p>
+
+
+  <div class="features">
+
+    <div class="featureHD">
+      <span>✓</span>
+      平台資訊
     </div>
 
-    <div>
+    <div class="featureHD">
+      <span>✓</span>
+      最新活動
+    </div>
 
-      <h3>
-        👑 皇鼎娛樂城
-      </h3>
+    <div class="featureHD">
+      <span>✓</span>
+      會員服務
+    </div>
 
-      <p>
-        皇鼎娛樂城相關平台資訊入口，
-        可快速了解平台內容與相關服務。
-      </p>
-
-      <div class="features">
-
-        <div class="feature">
-          <span>✓</span>
-          平台資訊
-        </div>
-
-        <div class="feature">
-          <span>✓</span>
-          活動資訊
-        </div>
-
-        <div class="feature">
-          <span>✓</span>
-          會員服務
-        </div>
-
-        <div class="feature">
-          <span>✓</span>
-          線上客服
-        </div>
-
-      </div>
-
+    <div class="featureHD">
+      <span>✓</span>
+      客服協助
     </div>
 
   </div>
 
 
-  <div class="cta">
+  <a
+    href="#"
+    class="service-button buttonHD">
 
-    <h2>
-      找到你需要的服務了嗎？
-    </h2>
+    立即了解 →
 
-    <p>
-      選擇上方項目，查看更多相關內容。
-    </p>
+  </a>
 
-    <a
-      href="#services"
-      class="btn btn-main">
-      查看服務
-    </a>
+</div>
 
-  </div>
+
+</div>
 
 </div>
 
 </section>
 
 
+
 <footer>
 
-  <p>
-    © 2026 芯瑤 AI Analysis
-  </p>
+  © 2026 芯瑤服務中心
 
-  <p style="margin-top:8px;">
-    本頁資訊僅供娛樂與資訊參考，請自行評估並理性使用。
-  </p>
+  <br><br>
+
+  本頁資訊僅供資訊與娛樂用途。
 
 </footer>
 
