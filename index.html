@@ -53,20 +53,12 @@ nav{
 
 .nav-inner{
   max-width:1150px;
+  min-height:54px;
   margin:auto;
   padding:15px 22px;
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-end;
   align-items:center;
-}
-
-.logo{
-  font-weight:950;
-  font-size:20px;
-}
-
-.logo span{
-  color:#ff9d12;
 }
 
 .menu{
@@ -374,7 +366,7 @@ nav{
 }
 
 .btnATG{
-  color:white;
+  color:#fff;
   background:linear-gradient(135deg,#ff72ad,#ff3e90);
   box-shadow:0 12px 30px rgba(218,90,142,.22);
 }
@@ -503,7 +495,6 @@ nav{
   }
 }
 
-/* 滑入動畫 */
 .reveal{
   opacity:0;
   transform:translateY(45px);
@@ -569,7 +560,7 @@ footer{
 
 /* 手機 */
 @media(max-width:900px){
-  .menu{
+  nav{
     display:none;
   }
 
@@ -578,7 +569,7 @@ footer{
   }
 
   .hero{
-    padding:120px 18px 70px;
+    padding:75px 18px 70px;
   }
 
   .service-grid{
@@ -648,10 +639,6 @@ footer{
 
 <nav>
   <div class="nav-inner">
-
-    <div class="logo">
-      芯瑤 <span>AI</span>
-    </div>
 
     <div class="menu">
       <a href="#539">539 趨勢</a>
@@ -810,19 +797,19 @@ footer{
         <div class="features">
 
           <div class="feature featureATG">
-            ✓ 房號數據分析
+            🎯 房號數據分析
           </div>
 
           <div class="feature featureATG">
-            ✓ 近期走勢整理
+            📈 近期走勢整理
           </div>
 
           <div class="feature featureATG">
-            ✓ 進場方向建議
+            📝 進場方向建議
           </div>
 
           <div class="feature featureATG">
-            ✓ 提升爆分機率
+            💥 提升爆分機率
           </div>
 
         </div>
