@@ -453,6 +453,25 @@ nav{
   box-shadow:0 12px 30px rgba(172,126,12,.22);
 }
 
+/* 皇鼎按鈕與提醒 */
+.hd-action-row{
+  margin-top:27px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.hd-action-row .action-button{
+  margin-top:0;
+}
+
+.hd-agent-note{
+  color:#8b1e1e;
+  font-size:16px;
+  font-weight:900;
+}
+
 /* 動畫 */
 @keyframes floatA{
   0%,100%{
@@ -605,6 +624,14 @@ footer{
     left:16px;
     border-radius:18px;
     border-width:4px;
+  }
+
+  .hd-action-row{
+    gap:12px;
+  }
+
+  .hd-agent-note{
+    font-size:15px;
   }
 
   .line-float{
@@ -783,19 +810,19 @@ footer{
         <div class="features">
 
           <div class="feature featureATG">
-            🎯 房號數據分析
+            ✓ 房號數據分析
           </div>
 
           <div class="feature featureATG">
-            📈 近期走勢整理
+            ✓ 近期走勢整理
           </div>
 
           <div class="feature featureATG">
-            📝 進場方向建議
+            ✓ 進場方向建議
           </div>
 
           <div class="feature featureATG">
-            💥 提升爆分機率
+            ✓ 提升爆分機率
           </div>
 
         </div>
@@ -875,13 +902,21 @@ footer{
 
         </div>
 
-        <a
-          href="https://hd5577.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="action-button btnHD">
-          立即了解 →
-        </a>
+        <div class="hd-action-row">
+
+          <a
+            href="https://hd5577.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="action-button btnHD">
+            立即了解 →
+          </a>
+
+          <span class="hd-agent-note">
+            【代理帳號】留空即可
+          </span>
+
+        </div>
 
       </div>
 
