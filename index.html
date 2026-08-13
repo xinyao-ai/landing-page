@@ -36,7 +36,6 @@ img{
   max-width:100%;
 }
 
-/* ===== 導覽列 ===== */
 nav{
   position:fixed;
   top:0;
@@ -82,7 +81,6 @@ nav{
   color:#ff9e13;
 }
 
-/* ===== 首頁 ===== */
 .hero{
   min-height:100vh;
   display:flex;
@@ -173,7 +171,6 @@ nav{
   }
 }
 
-/* ===== 共用 ===== */
 .container{
   width:100%;
   max-width:1150px;
@@ -361,66 +358,103 @@ nav{
   background:
     radial-gradient(circle at 20% 20%,#ffdce9,transparent 30%),
     radial-gradient(circle at 80% 80%,#fff0f6,transparent 30%),
-    #fff9fb;
+    linear-gradient(145deg,#fff9fb,#fff2f7);
 }
 
-.atg-preview{
-  min-height:430px;
-  border-radius:35px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.visualATG{
   position:relative;
+  min-height:530px;
+  border-radius:36px;
+  background:linear-gradient(145deg,#fff7fb,#ffd8e8);
+  box-shadow:0 30px 80px rgba(221,116,155,.15);
   overflow:hidden;
-  background:linear-gradient(145deg,#fff,#ffe5ef);
-  border:1px solid #ffe0eb;
-  box-shadow:0 30px 80px rgba(221,116,155,.13);
-}
-
-.phone{
-  width:220px;
-  height:380px;
-  border-radius:35px;
-  background:white;
-  border:7px solid #292929;
-  padding:18px;
-  box-shadow:0 20px 50px rgba(0,0,0,.15);
-  animation:phoneFloat 4s ease-in-out infinite;
-}
-
-@keyframes phoneFloat{
-  0%,100%{ transform:rotate(-3deg) translateY(0); }
-  50%{ transform:rotate(1deg) translateY(-12px); }
-}
-
-.phone-top{
-  width:70px;
-  height:7px;
-  margin:auto;
-  border-radius:20px;
-  background:#222;
-}
-
-.phone-content{
-  height:310px;
-  margin-top:20px;
-  border-radius:22px;
   display:flex;
-  flex-direction:column;
-  justify-content:center;
   align-items:center;
-  text-align:center;
-  background:linear-gradient(150deg,#fff,#ffe5ef);
-  color:#d46891;
+  justify-content:center;
+  padding:26px;
+  border:1px solid #ffd8e6;
 }
 
-.phone-icon{
-  font-size:55px;
+.visualATG::before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:rgba(255,255,255,.8);
+  top:-70px;
+  right:-50px;
+  filter:blur(15px);
 }
 
-.phone-content strong{
-  font-size:18px;
-  margin-top:10px;
+.visualATG::after{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:rgba(255,182,210,.35);
+  bottom:-50px;
+  left:-40px;
+  filter:blur(10px);
+}
+
+.coverATG{
+  width:56%;
+  max-width:300px;
+  border-radius:30px;
+  box-shadow:0 22px 60px rgba(209,93,147,.20);
+  z-index:2;
+  animation:floatMainPink 4s ease-in-out infinite;
+}
+
+.appATG{
+  position:absolute;
+  left:20px;
+  bottom:18px;
+  width:42%;
+  max-width:220px;
+  border-radius:28px;
+  border:8px solid rgba(255,255,255,.88);
+  box-shadow:0 20px 50px rgba(209,93,147,.18);
+  z-index:3;
+  animation:floatCardPink 4.8s ease-in-out infinite;
+}
+
+.pink-spark{
+  position:absolute;
+  color:#ff75af;
+  font-size:28px;
+  font-weight:900;
+  z-index:1;
+  animation:pinkTwinkle 2.5s ease-in-out infinite;
+}
+
+.pink-spark.one{
+  top:36px;
+  left:42px;
+}
+
+.pink-spark.two{
+  right:48px;
+  bottom:120px;
+  font-size:22px;
+  animation-delay:.9s;
+}
+
+@keyframes floatMainPink{
+  0%,100%{ transform:translateY(0px) rotate(2deg); }
+  50%{ transform:translateY(-12px) rotate(-1deg); }
+}
+
+@keyframes floatCardPink{
+  0%,100%{ transform:translateY(0px) rotate(-2deg); }
+  50%{ transform:translateY(-10px) rotate(1deg); }
+}
+
+@keyframes pinkTwinkle{
+  0%,100%{ opacity:.35; transform:scale(.9); }
+  50%{ opacity:1; transform:scale(1.15); }
 }
 
 .tagATG{
@@ -443,10 +477,9 @@ nav{
 }
 
 .buttonATG{
-  color:#a84f72;
-  background:linear-gradient(135deg,#fff,#ffdce9);
-  border:1px solid #f4cbd9;
-  box-shadow:0 12px 30px rgba(220,115,155,.13);
+  color:#fff;
+  background:linear-gradient(135deg,#ff6ba9,#ff3f90);
+  box-shadow:0 12px 30px rgba(220,115,155,.22);
 }
 
 /* ===========================
@@ -534,26 +567,31 @@ footer{
   }
 
   .visual539,
-  .atg-preview,
+  .visualATG,
   .hd-preview{
     min-height:340px;
   }
 
-  .cover539{
+  .cover539,
+  .coverATG{
     width:58%;
     max-width:210px;
   }
 
-  .app539{
+  .app539,
+  .appATG{
     width:38%;
     max-width:130px;
-    right:14px;
     bottom:14px;
     border-width:5px;
   }
 
-  .phone{
-    transform:scale(.85);
+  .app539{
+    right:14px;
+  }
+
+  .appATG{
+    left:14px;
   }
 
   .service-title{
@@ -585,7 +623,6 @@ footer{
   </div>
 </nav>
 
-<!-- 首頁 -->
 <section class="hero">
   <div class="hero-box">
     <div class="hero-label">
@@ -664,16 +701,17 @@ footer{
         </h2>
 
         <p class="service-text">
-          將遊戲資訊、選房觀察與個人操作邏輯
-          整理成更簡單易懂的分析流程，
-          手機即可快速查看。
+          房號分析、續玩判讀與個人近期紀錄，
+          一個頁面全部搞定。
+          介面採用淡粉白色系，清楚柔和，
+          快速整理你的分析流程，手機查看也很方便。
         </p>
 
         <div class="features">
-          <div class="featureATG"><span>✓</span> 選房分析</div>
-          <div class="featureATG"><span>✓</span> 遊戲資料整理</div>
-          <div class="featureATG"><span>✓</span> 個人分析 SOP</div>
-          <div class="featureATG"><span>✓</span> 手機快速使用</div>
+          <div class="featureATG"><span>✓</span> 房號分析功能</div>
+          <div class="featureATG"><span>✓</span> 續玩分析判讀</div>
+          <div class="featureATG"><span>✓</span> 分析紀錄整合</div>
+          <div class="featureATG"><span>✓</span> 淡粉白風格，清楚好操作</div>
         </div>
 
         <a href="#" class="service-button buttonATG">
@@ -681,15 +719,11 @@ footer{
         </a>
       </div>
 
-      <div class="atg-preview">
-        <div class="phone">
-          <div class="phone-top"></div>
-          <div class="phone-content">
-            <div class="phone-icon">🎰</div>
-            <strong>芯瑤 ATG</strong>
-            <small>AI 分析助手</small>
-          </div>
-        </div>
+      <div class="visualATG">
+        <div class="pink-spark one">✦</div>
+        <div class="pink-spark two">✦</div>
+        <img src="atg-app.jpg" alt="ATG分析畫面" class="coverATG">
+        <img src="atg-cover.png" alt="ATG主視覺" class="appATG">
       </div>
 
     </div>
