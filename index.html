@@ -206,7 +206,7 @@ nav{
 .service-grid{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-  gap:55px;
+  gap:65px;
   align-items:center;
 }
 
@@ -260,37 +260,54 @@ nav{
     linear-gradient(145deg,#fffaf0,#fff0c2);
 }
 
+/* 539 無框懸浮圖片 */
 .visual539{
   min-height:530px;
   position:relative;
   display:flex;
   align-items:center;
   justify-content:center;
-  overflow:hidden;
-  padding:30px;
-  border-radius:38px;
-  background:linear-gradient(145deg,#ffc950,#ff9300);
-  box-shadow:0 30px 80px rgba(255,145,0,.20);
+  overflow:visible;
+  padding:20px;
+  isolation:isolate;
+}
+
+.visual539::before{
+  content:"";
+  position:absolute;
+  width:88%;
+  height:78%;
+  border-radius:50%;
+  background:radial-gradient(
+    circle,
+    rgba(255,171,29,.30),
+    rgba(255,189,70,.12) 45%,
+    transparent 72%
+  );
+  filter:blur(14px);
+  z-index:-1;
 }
 
 .main539{
-  width:58%;
-  max-width:320px;
+  width:65%;
+  max-width:355px;
   border-radius:30px;
-  box-shadow:0 25px 60px rgba(0,0,0,.20);
+  box-shadow:
+    0 30px 65px rgba(212,119,0,.22),
+    0 8px 20px rgba(0,0,0,.08);
   z-index:2;
   animation:floatA 4s ease-in-out infinite;
 }
 
 .small539{
   position:absolute;
-  right:20px;
-  bottom:20px;
-  width:38%;
-  max-width:210px;
+  right:2%;
+  bottom:5%;
+  width:41%;
+  max-width:225px;
   border-radius:27px;
-  border:7px solid rgba(255,255,255,.85);
-  box-shadow:0 20px 50px rgba(0,0,0,.18);
+  border:7px solid rgba(255,255,255,.94);
+  box-shadow:0 24px 55px rgba(140,75,0,.20);
   z-index:3;
   animation:floatB 4.8s ease-in-out infinite;
 }
@@ -319,38 +336,54 @@ nav{
     #fff8fb;
 }
 
+/* ATG 無框懸浮圖片 */
 .visualATG{
   min-height:530px;
   position:relative;
   display:flex;
   justify-content:center;
   align-items:center;
-  overflow:hidden;
-  border-radius:38px;
-  padding:30px;
-  background:linear-gradient(145deg,#fff,#ffdce9);
-  border:1px solid #ffd2e2;
-  box-shadow:0 30px 80px rgba(217,109,152,.14);
+  overflow:visible;
+  padding:20px;
+  isolation:isolate;
+}
+
+.visualATG::before{
+  content:"";
+  position:absolute;
+  width:88%;
+  height:78%;
+  border-radius:50%;
+  background:radial-gradient(
+    circle,
+    rgba(255,174,207,.33),
+    rgba(255,214,229,.16) 45%,
+    transparent 72%
+  );
+  filter:blur(14px);
+  z-index:-1;
 }
 
 .mainATG{
-  width:57%;
-  max-width:300px;
+  width:64%;
+  max-width:340px;
   border-radius:30px;
-  box-shadow:0 25px 60px rgba(207,87,138,.18);
+  box-shadow:
+    0 30px 65px rgba(205,83,135,.20),
+    0 8px 20px rgba(0,0,0,.07);
   z-index:2;
   animation:floatB 4.3s ease-in-out infinite;
 }
 
 .smallATG{
   position:absolute;
-  right:20px;
-  bottom:20px;
-  width:40%;
-  max-width:215px;
+  right:2%;
+  bottom:5%;
+  width:42%;
+  max-width:225px;
   border-radius:27px;
-  border:7px solid rgba(255,255,255,.92);
-  box-shadow:0 20px 50px rgba(213,91,143,.16);
+  border:7px solid rgba(255,255,255,.95);
+  box-shadow:0 24px 55px rgba(181,70,117,.19);
   z-index:3;
   animation:floatA 5s ease-in-out infinite;
 }
@@ -379,38 +412,54 @@ nav{
     linear-gradient(145deg,#fffefa,#fff5ce);
 }
 
+/* 皇鼎無框懸浮圖片 */
 .visualHD{
   min-height:550px;
   position:relative;
   display:flex;
   justify-content:center;
   align-items:center;
-  overflow:hidden;
-  padding:30px;
-  border-radius:38px;
-  background:linear-gradient(145deg,#fffdf4,#ffe88a);
-  border:1px solid #efd16a;
-  box-shadow:0 30px 80px rgba(167,122,10,.18);
+  overflow:visible;
+  padding:20px;
+  isolation:isolate;
+}
+
+.visualHD::before{
+  content:"";
+  position:absolute;
+  width:90%;
+  height:80%;
+  border-radius:50%;
+  background:radial-gradient(
+    circle,
+    rgba(229,185,55,.27),
+    rgba(255,226,120,.15) 45%,
+    transparent 72%
+  );
+  filter:blur(15px);
+  z-index:-1;
 }
 
 .mainHD{
-  width:55%;
-  max-width:300px;
+  width:63%;
+  max-width:350px;
   border-radius:30px;
-  box-shadow:0 25px 60px rgba(91,67,0,.20);
+  box-shadow:
+    0 30px 65px rgba(111,79,0,.21),
+    0 8px 20px rgba(0,0,0,.08);
   z-index:2;
   animation:floatA 4.2s ease-in-out infinite;
 }
 
 .smallHD{
   position:absolute;
-  right:20px;
-  bottom:20px;
-  width:42%;
-  max-width:230px;
+  right:0;
+  bottom:4%;
+  width:45%;
+  max-width:240px;
   border-radius:26px;
-  border:7px solid rgba(255,255,255,.92);
-  box-shadow:0 20px 50px rgba(97,70,0,.18);
+  border:7px solid rgba(255,255,255,.95);
+  box-shadow:0 24px 55px rgba(97,70,0,.20);
   z-index:3;
   animation:floatB 4.8s ease-in-out infinite;
 }
@@ -419,12 +468,12 @@ nav{
   position:absolute;
   width:88px;
   height:88px;
-  left:24px;
-  top:24px;
+  left:4%;
+  top:7%;
   object-fit:cover;
   border-radius:24px;
-  border:5px solid rgba(255,255,255,.92);
-  box-shadow:0 15px 35px rgba(113,80,0,.20);
+  border:5px solid rgba(255,255,255,.95);
+  box-shadow:0 18px 38px rgba(113,80,0,.20);
   z-index:4;
   animation:logoFloat 3.5s ease-in-out infinite;
 }
@@ -495,6 +544,7 @@ nav{
   }
 }
 
+/* 滑入動畫 */
 .reveal{
   opacity:0;
   transform:translateY(45px);
@@ -558,7 +608,7 @@ footer{
   border-top:1px solid #eee;
 }
 
-/* 手機 */
+/* 手機版 */
 @media(max-width:900px){
   nav{
     display:none;
@@ -582,39 +632,41 @@ footer{
   }
 
   .service-section{
-    padding:85px 18px;
+    padding:80px 18px;
   }
 
   .visual539,
   .visualATG,
   .visualHD{
-    min-height:360px;
+    min-height:390px;
+    padding:10px 8px 35px;
   }
 
   .main539,
   .mainATG,
   .mainHD{
-    max-width:210px;
-    width:58%;
+    width:66%;
+    max-width:250px;
   }
 
   .small539,
   .smallATG,
   .smallHD{
-    max-width:135px;
-    width:38%;
-    bottom:14px;
-    right:14px;
+    width:40%;
+    max-width:150px;
+    right:2%;
+    bottom:5%;
     border-width:5px;
+    border-radius:20px;
   }
 
   .hdLogo{
-    width:64px;
-    height:64px;
-    top:16px;
-    left:16px;
-    border-radius:18px;
+    width:65px;
+    height:65px;
+    left:3%;
+    top:6%;
     border-width:4px;
+    border-radius:18px;
   }
 
   .hd-action-row{
@@ -626,10 +678,31 @@ footer{
   }
 
   .line-float{
-    right:14px;
-    bottom:14px;
-    padding:12px 15px;
-    font-size:13px;
+    right:12px;
+    bottom:12px;
+    padding:10px 13px;
+    font-size:12px;
+  }
+}
+
+@media(max-width:430px){
+  .visual539,
+  .visualATG,
+  .visualHD{
+    min-height:350px;
+  }
+
+  .main539,
+  .mainATG,
+  .mainHD{
+    width:68%;
+  }
+
+  .small539,
+  .smallATG,
+  .smallHD{
+    width:42%;
+    right:0;
   }
 }
 </style>
