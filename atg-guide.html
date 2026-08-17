@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ATG打法怎麼玩？｜ATG選房・ATG選房分析・房號走勢</title>
+
+  <meta
+    name="description"
+    content="整理 ATG 打法、ATG 怎麼玩、ATG 選房與 ATG 選房分析常見方向，從房號數據、近期走勢與選房邏輯開始看，並提供芯瑤 ATG 分析助手入口。"
+  >
+
+  <meta name="robots" content="index,follow">
+
+  <link rel="canonical" href="https://xinyao-ai.github.io/landing-page/atg-guide.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ATG打法怎麼玩？｜ATG選房・ATG選房分析">
+  <meta property="og:description" content="整理 ATG 打法、ATG 怎麼玩、ATG 選房與房號趨勢的入門說明，搭配芯瑤 ATG 分析助手快速查看資料。">
+  <meta property="og:url" content="https://xinyao-ai.github.io/landing-page/atg-guide.html">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"ATG打法怎麼玩？｜ATG選房・ATG選房分析・房號走勢",
+    "description":"整理 ATG 打法、ATG 怎麼玩、ATG 選房與 ATG 選房分析常見方向，從房號數據與近期走勢開始了解。",
+    "inLanguage":"zh-TW",
+    "mainEntityOfPage":"https://xinyao-ai.github.io/landing-page/atg-guide.html"
+  }
+  </script>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;
+      color:#463a40;
+      background:
+        radial-gradient(circle at 15% 8%,rgba(255,214,230,.75),transparent 28%),
+        radial-gradient(circle at 88% 18%,rgba(255,235,244,.9),transparent 30%),
+        linear-gradient(180deg,#fffafd 0%,#fff6fa 55%,#fff 100%);
+      line-height:1.75;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .wrap{
+      width:min(100% - 34px,980px);
+      margin:auto;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:20;
+      border-bottom:1px solid rgba(210,115,154,.10);
+      background:rgba(255,255,255,.82);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .topbar-inner{
+      width:min(100% - 34px,980px);
+      min-height:58px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+
+    .brand{
+      color:#b4547d;
+      font-size:14px;
+      font-weight:900;
+    }
+
+    .back-link{
+      color:#8b6576;
+      font-size:13px;
+      font-weight:800;
+    }
+
+    .hero{
+      padding:78px 0 48px;
+      text-align:center;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:8px 14px;
+      border:1px solid #f5d2e1;
+      background:rgba(255,255,255,.88);
+      color:#bc5c84;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:900;
+      box-shadow:0 10px 28px rgba(194,95,137,.08);
+    }
+
+    h1{
+      margin-top:20px;
+      font-size:clamp(38px,7vw,64px);
+      line-height:1.08;
+      letter-spacing:-1.5px;
+      background:linear-gradient(90deg,#df6e9c,#ff8bb8,#bc5b86);
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+
+    .hero p{
+      max-width:720px;
+      margin:20px auto 0;
+      color:#786973;
+      font-size:16px;
+    }
+
+    .hero-actions{
+      margin-top:27px;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:0 20px;
+      border-radius:15px;
+      font-weight:900;
+      transition:.25s;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .btn-primary{
+      color:white;
+      background:linear-gradient(135deg,#ff7db0,#f34b93);
+      box-shadow:0 13px 30px rgba(225,77,142,.22);
+    }
+
+    .btn-secondary{
+      color:#a45176;
+      background:#fff;
+      border:1px solid #f0cfdd;
+    }
+
+    .quick-nav{
+      margin-top:36px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+
+    .quick-nav a{
+      padding:15px 12px;
+      border-radius:17px;
+      background:rgba(255,255,255,.82);
+      border:1px solid #f2d7e2;
+      color:#9f5573;
+      font-size:13px;
+      font-weight:900;
+      text-align:center;
+      box-shadow:0 12px 28px rgba(188,86,130,.06);
+    }
+
+    main{
+      padding:18px 0 70px;
+    }
+
+    .card{
+      margin-top:20px;
+      padding:30px;
+      border-radius:26px;
+      background:rgba(255,255,255,.9);
+      border:1px solid #f3dce6;
+      box-shadow:0 18px 48px rgba(174,86,124,.08);
+    }
+
+    .eyebrow{
+      color:#d36d98;
+      font-size:12px;
+      font-weight:950;
+      letter-spacing:.8px;
+    }
+
+    h2{
+      margin-top:7px;
+      color:#5a424d;
+      font-size:28px;
+      line-height:1.3;
+    }
+
+    h3{
+      margin-top:22px;
+      color:#8d526a;
+      font-size:19px;
+      line-height:1.4;
+    }
+
+    .card p{
+      margin-top:13px;
+      color:#766a70;
+    }
+
+    .point-grid{
+      margin-top:20px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+
+    .point{
+      padding:18px;
+      border-radius:18px;
+      background:linear-gradient(145deg,#fff,#fff2f7);
+      border:1px solid #f1d7e2;
+    }
+
+    .point strong{
+      display:block;
+      color:#a65477;
+      margin-bottom:6px;
+    }
+
+    .steps{
+      margin-top:18px;
+      display:grid;
+      gap:12px;
+      counter-reset:step;
+    }
+
+    .step{
+      position:relative;
+      padding:17px 18px 17px 56px;
+      border-radius:18px;
+      background:#fff7fa;
+      border:1px solid #f4dce6;
+      color:#74656d;
+    }
+
+    .step::before{
+      counter-increment:step;
+      content:counter(step);
+      position:absolute;
+      left:16px;
+      top:15px;
+      width:28px;
+      height:28px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#f68ab5;
+      color:#fff;
+      font-size:13px;
+      font-weight:900;
+    }
+
+    .tag-row{
+      margin-top:18px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .tag{
+      display:inline-flex;
+      padding:7px 11px;
+      border-radius:999px;
+      background:#fff1f7;
+      border:1px solid #f1d5e0;
+      color:#aa587a;
+      font-size:12px;
+      font-weight:900;
+    }
+
+    .notice{
+      margin-top:18px;
+      padding:16px 18px;
+      border-radius:16px;
+      background:#fff8ec;
+      border:1px solid #f5dfb5;
+      color:#7e6c4d;
+      font-size:13px;
+    }
+
+    .cta{
+      margin-top:24px;
+      padding:30px;
+      border-radius:26px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 20% 15%,rgba(255,255,255,.7),transparent 25%),
+        linear-gradient(135deg,#ffe3ee,#fff3f8);
+      border:1px solid #f0d2df;
+    }
+
+    .cta h2{
+      color:#9f5575;
+    }
+
+    footer{
+      padding:34px 20px 42px;
+      text-align:center;
+      color:#a18e97;
+      font-size:12px;
+    }
+
+    @media(max-width:760px){
+      .hero{
+        padding-top:55px;
+      }
+
+      .quick-nav{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .point-grid{
+        grid-template-columns:1fr;
+      }
+
+      .card{
+        padding:23px 20px;
+      }
+
+      h2{
+        font-size:24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">🌸 芯瑤 ATG 分析助手</div>
+      <a class="back-link" href="https://xinyao-ai.github.io/landing-page/">← 返回芯瑤服務中心</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="pill">✦ ATG GUIDE・選房分析入門</div>
+
+      <h1>ATG打法怎麼玩？<br>ATG選房與分析整理</h1>
+
+      <p>
+        如果你正在搜尋 ATG 打法、ATG 怎麼玩、ATG 選房或 ATG 選房分析，
+        這一頁先把常見觀察方向整理成容易理解的方式。
+        重點不是單看一個房號，而是把房號數據、近期走勢與自己的進場條件一起參考。
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://xinyao-ai.github.io/xinyao-ai/?v=5000" target="_blank" rel="noopener noreferrer">
+          進入 ATG 分析助手 →
+        </a>
+
+        <a class="btn btn-secondary" href="#guide">
+          先看 ATG 打法整理
+        </a>
+      </div>
+
+      <div class="quick-nav">
+        <a href="#what">ATG 怎麼玩</a>
+        <a href="#guide">ATG 打法</a>
+        <a href="#room">ATG 選房</a>
+        <a href="#analysis">ATG 選房分析</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+
+      <section id="what" class="card">
+        <div class="eyebrow">ATG HOW TO START</div>
+        <h2>ATG 怎麼玩？先從玩法與房號觀察開始</h2>
+
+        <p>
+          ATG 類型遊戲在實際操作時，除了先了解遊戲本身規則，也有人會觀察不同房號近期的紀錄與變化。
+          因此在進場前，可以先把「遊戲規則、房號資料、近期走勢、自己的娛樂預算」分開看，
+          再決定是否要進入該房間。
+        </p>
+
+        <div class="point-grid">
+          <div class="point">
+            <strong>① 先看遊戲規則</strong>
+            不同遊戲的波動、免費遊戲與特殊功能不同，先知道自己玩的內容。
+          </div>
+
+          <div class="point">
+            <strong>② 再看房號數據</strong>
+            房號資料可以當成整理參考，不建議只因為單一數字就直接做決定。
+          </div>
+
+          <div class="point">
+            <strong>③ 觀察近期走勢</strong>
+            將近期紀錄一起看，比只看單一時間點更容易理解變化。
+          </div>
+
+          <div class="point">
+            <strong>④ 設定自己的條件</strong>
+            先決定娛樂預算與停手條件，不因短期結果一直追加。
+          </div>
+        </div>
+      </section>
+
+      <section id="guide" class="card">
+        <div class="eyebrow">ATG PLAY GUIDE</div>
+        <h2>ATG 打法可以怎麼整理？</h2>
+
+        <p>
+          「ATG 打法」沒有單一固定公式。比較適合的做法，是先建立自己的觀察流程，
+          讓每次看房時都有一致的判斷順序，而不是看到某個房號就臨時決定。
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            先確認今天要看的遊戲與房間，不同遊戲不要混在一起判斷。
+          </div>
+          <div class="step">
+            查看房號近期資料與走勢，先把明顯不符合自己條件的房間排除。
+          </div>
+          <div class="step">
+            比較剩下房號的近期紀錄，再搭配自己的進場條件做選擇。
+          </div>
+          <div class="step">
+            進場後依原先設定的娛樂預算與停手條件操作，不因短期結果頻繁改變規則。
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">ATG打法</span>
+          <span class="tag">ATG怎麼玩</span>
+          <span class="tag">ATG房號</span>
+          <span class="tag">ATG近期走勢</span>
+        </div>
+      </section>
+
+      <section id="room" class="card">
+        <div class="eyebrow">ATG ROOM SELECTION</div>
+        <h2>ATG 選房要看什麼？</h2>
+
+        <p>
+          ATG 選房可以先把房號當成「資料整理的單位」。
+          與其只問哪一房比較好，不如把近期紀錄、出現頻率、前幾次變化與自己的進場條件一起比較。
+          這樣比較容易建立固定的選房流程。
+        </p>
+
+        <h3>選房時可以先注意的 3 個方向</h3>
+
+        <div class="point-grid">
+          <div class="point">
+            <strong>房號近期紀錄</strong>
+            先確認資料時間是否夠新，再看近期變化，而不是只看很久以前的紀錄。
+          </div>
+
+          <div class="point">
+            <strong>不同房號之間比較</strong>
+            同一時間比較數個候選房號，比只盯著一個房號更有參考性。
+          </div>
+
+          <div class="point">
+            <strong>符合自己的進場條件</strong>
+            房號資料只是其中一部分，仍需搭配自己的遊戲習慣與娛樂預算。
+          </div>
+
+          <div class="point">
+            <strong>不要把分析當保證</strong>
+            歷史資料只能作為整理與觀察，不代表後續結果一定相同。
+          </div>
+        </div>
+      </section>
+
+      <section id="analysis" class="card">
+        <div class="eyebrow">ATG ROOM ANALYSIS</div>
+        <h2>ATG 選房分析：把房號數據與走勢集中整理</h2>
+
+        <p>
+          芯瑤 ATG 分析助手的方向，是把房號數據、近期走勢與進場方向集中在同一個畫面，
+          讓使用者不用自己來回整理資料。
+          如果你平常會搜尋 ATG 選房分析、ATG 房號分析或 ATG 近期走勢，
+          可以先透過分析助手快速查看，再自行判斷是否符合自己的條件。
+        </p>
+
+        <div class="point-grid">
+          <div class="point">
+            <strong>房號數據分析</strong>
+            集中整理不同房號的資料，方便快速比較。
+          </div>
+
+          <div class="point">
+            <strong>近期走勢整理</strong>
+            把近期變化集中顯示，減少自己手動查找。
+          </div>
+
+          <div class="point">
+            <strong>進場方向參考</strong>
+            提供資料整理後的方向，作為個人判斷參考。
+          </div>
+
+          <div class="point">
+            <strong>手機快速查看</strong>
+            使用手機即可開啟分析工具，不需要另外整理表格。
+          </div>
+        </div>
+
+        <div class="notice">
+          提醒：本頁與分析工具僅提供資料整理與娛樂參考，不保證任何遊戲結果或獲利。
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="eyebrow">XINYAO ATG ASSISTANT</div>
+        <h2>想直接查看房號分析？</h2>
+        <p>
+          可直接進入芯瑤 ATG 分析助手，查看房號數據、近期走勢與選房方向。
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://xinyao-ai.github.io/xinyao-ai/?v=5000" target="_blank" rel="noopener noreferrer">
+            進入 ATG 分析助手 →
+          </a>
+
+          <a class="btn btn-secondary" href="https://xinyao-ai.github.io/landing-page/">
+            返回芯瑤服務中心
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    © 2026 芯瑤服務中心<br>
+    本頁內容僅供資訊整理與娛樂參考。
+  </footer>
+
+</body>
+</html>
